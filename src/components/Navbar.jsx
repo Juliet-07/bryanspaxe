@@ -23,7 +23,7 @@ const Navbar = () => {
         <NavLink to="/" className="p-2" style={activeStyle}>
           Home
         </NavLink>
-        <NavLink to="/aboutus" className="p-2" style={activeStyle}>
+        <NavLink to="/aboutUs" className="p-2" style={activeStyle}>
           About us
         </NavLink>
         <NavLink to="/investmentPlans" className="p-2" style={activeStyle}>
@@ -61,7 +61,7 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to="/aboutus"
+            to="/aboutUs"
             className="p-4 font-primarySemibold"
             style={activeStyle}
           >

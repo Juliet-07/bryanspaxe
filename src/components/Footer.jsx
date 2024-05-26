@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/logo.png";
 import { AiOutlineCopyright } from "react-icons/ai";
 import { MdOutlineLocalPhone } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
         </div>
         {/* 2 */}
         <div className="grid md:grid-cols-4 gap-4 text-[#1E1E1E] font-primarySemibold">
-          <div>About Us</div>
+          <NavLink to="/aboutUs">About Us</NavLink>
           <div className="flex flex-col">
             <p>Services</p>
             <div className="grid text-sm text-[#2F36A9] font-primaryRegular">
