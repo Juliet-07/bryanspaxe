@@ -1,92 +1,55 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-
+import { AiOutlineCopyright } from "react-icons/ai";
+import { MdOutlineLocalPhone } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <>
-      <div className="hidden w-full h-[429px] md:flex flex-col items-center justify-center mt-10">
-        <div className="w-full h-[347px] bg-[#0A4F60] flex flex-col md:flex-row items-center justify-center md:justify-around">
-          <div className="flex-col">
-            <div className="w-[150px] md:w-[215px] h-[35px] md:h-[55px] my-2">
-              <img src={Logo} alt="Monnnayfinance" />
-            </div>
-            <div className="hidden md:block text-base text-white font-primarySemibold w-[311px]">
-              {" "}
-              Investment opportunities in multiple markets, one account{" "}
-            </div>
+    <div className="w-full md:h-[487px] bg-gradient-to-r from-[#FFFFFF] to-[#2F36A9]/70 flex flex-col justify-between mt-10">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-around p-6 flex-grow">
+        {/* 1 */}
+        <div className="flex-col mb-4 md:mb-0">
+          <div className="w-[155px] h-[123px] my-2">
+            <img src={Logo} alt="Bryanspaxe" />
           </div>
-          <div className="flex flex-col items-center text-white font-primarySemibold">
-            <div className="text-2xl font-primaryBold my-2">Quick links</div>
-            <ul className="list-disc">
-              <li>Home</li>
-              <li>About us</li>
-              <li>Contact us</li>
-              <li>FAQ</li>
-            </ul>
-          </div>
-          <div className="flex-col text-white font-primarySemibold">
-            <div className="w-[96px] h-[33px] font-primaryBold text-2xl">
-              Address
-            </div>
-            <div className="h-[110px]">
-              <p>Vanha Talvitie 11 C,</p>
-              <p>HELSINKI 00580 Finland</p>
-              <br />
-              <p>Email:</p>
-              <p>contact@monnay.finance</p>
-            </div>
+          <div className="hidden text-base text-white font-primarySemibold w-[311px]">
+            Investment opportunities in multiple markets, one account
           </div>
         </div>
-        <div className="w-full h-[82px] bg-[#0A4F60] md:bg-[#057d99] flex items-center justify-center uppercase text-white text-sm text-center font-primaryRegular">
-          copyright monnayfinace {new Date().getFullYear()} - terms and
-          conditons privacy policy
+        {/* 2 */}
+        <div className="grid md:grid-cols-4 gap-4 text-[#1E1E1E] font-primarySemibold">
+          <div>About Us</div>
+          <div className="flex flex-col">
+            <p>Services</p>
+            <div className="grid text-sm text-[#2F36A9] font-primaryRegular">
+              <p>Engineering Consultation</p>
+              <p>Procurement Services</p>
+              <p>Installation Services</p>
+              <p>Maintenance & Support</p>
+            </div>
+          </div>
+          <div>Blog</div>
+          <div>Contact Us</div>
+        </div>
+        {/* 3 */}
+        <div className="flex flex-col md:items-center gap-6 my-4 md:my-0 text-[#078904] font-primarySemibold">
+          <div className="flex items-center">
+            <span className="mr-2">
+              <MdOutlineLocalPhone size={20} />
+            </span>
+            Call us 091223344
+          </div>
+          <div className="text-gray-900">social media icons</div>
         </div>
       </div>
-      {/* MOBILE FOOTER */}
-      <div className="md:hidden w-full text-white flex flex-col bg-[#0A4F60] mt-[100px]">
-        {/* <div className="p-10 grid gap-6">
-          <div className="flex items-center font-primaryRegular">
-            <div>
-              <img src={Support} className="mx-4" />
-            </div>
-            <div>
-              <b>Support</b> team across the country
-            </div>
-          </div>
-          <div className="flex items-center font-primaryRegular">
-            <div>
-              <img src={Safe} className="mx-4" />
-            </div>
-            <div>
-              <b>Safe & Secure</b> online payment
-            </div>
-          </div>
-        </div> */}
-        <hr />
-        <div className="p-10 grid gap-10">
-          <div className="flex items-center gap-10">
-            <div className="grid font-primaryRegular">
-              <p className="font-primaryBold uppercase my-4">who we are</p>
-              <p>About</p>
-              <p>Team</p>
-              <p>Work With Us</p>
-            </div>
-            <div className="grid font-primaryRegular">
-              <p className="font-primaryBold uppercase my-4">support</p>
-              <p>Terms & Privacy Policy</p>
-              <p>Support Policy</p>
-              <p>Contact</p>
-            </div>
-          </div>
-          <div className="font-primaryRegular">
-            <p className="font-primaryBold uppercase my-4">Monnay finance</p>
-            <p>Features</p>
-            <p>Payments</p>
-          </div>
-        </div>
+      <hr className="border-t border-[#A9A5A5] w-full" />
+      <div className="flex items-center justify-center md:uppercase text-[#373435] text-sm md:text-lg font-primaryRegular p-4">
+        <span className="mx-2">
+          <AiOutlineCopyright />
+        </span>
+        Copyright Bryanspaxe {new Date().getFullYear()} - All rights reserved
       </div>
-    </>
+    </div>
   );
 };
 
