@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
           <div>Blog</div>
-          <div>Contact Us</div>
+          <NavLink to="/contactUs">Contact Us</NavLink>
         </div>
         {/* 3 */}
         <div className="flex flex-col md:items-center gap-6 my-4 md:my-0 text-[#078904] font-primarySemibold">

@@ -29,7 +29,7 @@ const Navbar = () => {
         <NavLink to="/investmentPlans" className="p-2" style={activeStyle}>
           Services
         </NavLink>
-        <NavLink to="/faq" className="p-2" style={activeStyle}>
+        <NavLink to="/blog" className="p-2" style={activeStyle}>
           Blog
         </NavLink>
         <NavLink to="/contactUs" className="p-2" style={activeStyle}>
@@ -75,7 +75,7 @@ const Navbar = () => {
             Services
           </NavLink>
           <NavLink
-            to="/faq"
+            to="/blog"
             className="p-4 font-primarySemibold"
             style={activeStyle}
           >

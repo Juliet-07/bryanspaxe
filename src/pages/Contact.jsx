@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import Background from "../assets/aboutHero.png";
-import MobileBG from "../assets/aboutHeroMobile.png";
+import Background from "../assets/contactHero.png";
+import MobileBG from "../assets/contactHeroMobile.png";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 
