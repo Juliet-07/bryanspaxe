@@ -32,7 +32,7 @@ const Navbar = () => {
         <NavLink to="/faq" className="p-2" style={activeStyle}>
           Blog
         </NavLink>
-        <NavLink to="/contact-us" className="p-2" style={activeStyle}>
+        <NavLink to="/contactUs" className="p-2" style={activeStyle}>
           Contact Us
         </NavLink>
       </nav>
@@ -82,7 +82,7 @@ const Navbar = () => {
             Blog
           </NavLink>
           <NavLink
-            to="/contact-us"
+            to="/contactUs"
             className="p-4 font-primarySemibold"
             style={activeStyle}
           >
