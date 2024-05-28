@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import Background from "../assets/homeBg.png";
 import WhyUsBg from "../assets/whyUsFrame.png";
 import WhyUsBgMobile from "../assets/whyUsMobile.png";
@@ -301,7 +302,9 @@ const Home = () => {
                 skilled engineers offers professional guidance and customized
                 solutions to meet your particular requirements.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/consultation">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -326,7 +329,9 @@ const Home = () => {
                 purchasing team utilizes an extensive network of reliable
                 suppliers to fulfill your particular needs.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/procurement">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -345,7 +350,9 @@ const Home = () => {
                 guarantee the accurate installation of your equipment and its
                 optimal functionality right from the outset.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/installation">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -370,7 +377,9 @@ const Home = () => {
                 maintenance and urgent repair services to reduce downtime and
                 prolong the lifespan of your machinery.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/support">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -401,7 +410,9 @@ const Home = () => {
                 skilled engineers offers professional guidance and customized
                 solutions to meet your particular requirements.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/consultation">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -423,7 +434,9 @@ const Home = () => {
                 purchasing team utilizes an extensive network of reliable
                 suppliers to fulfill your particular needs.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/procurement">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -445,7 +458,9 @@ const Home = () => {
                 guarantee the accurate installation of your equipment and its
                 optimal functionality right from the outset.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/installation">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -467,7 +482,9 @@ const Home = () => {
                 maintenance and urgent repair services to reduce downtime and
                 prolong the lifespan of your machinery.
                 <br />
-                <span className="underline text-[#2F36A9]">Learn more</span>
+                <Link to="/support">
+                  <span className="underline text-[#2F36A9]">Learn more</span>
+                </Link>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../assets/logo.png";
 import { AiOutlineCopyright } from "react-icons/ai";
 import { MdOutlineLocalPhone } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,11 +22,11 @@ const Footer = () => {
           <NavLink to="/aboutUs">About Us</NavLink>
           <div className="flex flex-col">
             <p>Services</p>
-            <div className="grid text-sm text-[#2F36A9] font-primaryRegular">
-              <p>Engineering Consultation</p>
-              <p>Procurement Services</p>
-              <p>Installation Services</p>
-              <p>Maintenance & Support</p>
+            <div className="grid gap-4 my-3 text-sm text-[#2F36A9] font-primaryRegular">
+              <Link to="/consultation">Engineering Consultation</Link>
+              <Link to="/procurement">Procurement Services</Link>
+              <Link to="/installation">Installation Services</Link>
+              <Link to="/support">Maintenance & Support</Link>
             </div>
           </div>
           <div>Blog</div>

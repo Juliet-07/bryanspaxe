@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { AiOutlineClose, AiOutlineAlignRight } from "react-icons/ai";
+import {
+  Menu,
+  MenuButton,
+  MenuItems,
+  MenuItem,
+  Transition,
+} from "@headlessui/react";
+import { BiChevronDown } from "react-icons/bi";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -26,9 +34,62 @@ const Navbar = () => {
         <NavLink to="/aboutUs" className="p-2" style={activeStyle}>
           About us
         </NavLink>
-        <NavLink to="/investmentPlans" className="p-2" style={activeStyle}>
-          Services
-        </NavLink>
+        <Menu as="div" className="relative inline-block text-left p-2">
+          <div>
+            <MenuButton className="inline-flex items-center justify-between font-primaryRegular">
+              Services
+              <BiChevronDown className="h-5 w-5" aria-hidden="true" />
+            </MenuButton>
+          </div>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <MenuItems className="absolute right-0 z-10 mt-2 w-[300px] origin-top-right rounded-md bg-white grid gap-4 p-2 shadow-lg">
+              <MenuItem>
+                <NavLink
+                  to="/consultation"
+                  style={activeStyle}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                 Engineering Consultation
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink
+                  to="/procurement"
+                  style={activeStyle}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Procurement Services
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink
+                  to="/installation"
+                  style={activeStyle}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Installation Services
+                </NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink
+                  to="/support"
+                  style={activeStyle}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Maintenance & Support
+                </NavLink>
+              </MenuItem>
+            </MenuItems>
+          </Transition>
+        </Menu>
         <NavLink to="/blog" className="p-2" style={activeStyle}>
           Blog
         </NavLink>
@@ -48,7 +109,7 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "fixed left-0 top-20 w-[414px] h-[350px] ease-in-out duration-500 bg-white z-20"
+            ? "fixed left-0 top-20 w-[414px] h-[400px] ease-in-out duration-500 bg-white z-20"
             : "fixed left-[-100%]"
         }
       >
@@ -67,13 +128,65 @@ const Navbar = () => {
           >
             About us
           </NavLink>
-          <NavLink
-            to="/investmentPlans"
-            className="p-4 font-primarySemibold"
-            style={activeStyle}
+          <Menu
+            as="div"
+            className="relative inline-block text-left p-4 font-primarySemibold"
           >
-            Services
-          </NavLink>
+            <div>
+              <MenuButton className="inline-flex items-center justify-between uppercase">
+                Services
+                <BiChevronDown className="h-5 w-5" aria-hidden="true" />
+              </MenuButton>
+            </div>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <MenuItems className="absolute left-0 z-10 mt-2 w-[300px]  origin-top-left rounded-md bg-white grid gap-4 shadow-lg">
+                <MenuItem>
+                  <NavLink
+                    to="/consultation"
+                    style={activeStyle}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                   Engineering Consultation
+                  </NavLink>
+                </MenuItem>
+                <MenuItem>
+                  <NavLink
+                    to="/procurement"
+                    style={activeStyle}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Procurement Services
+                  </NavLink>
+                </MenuItem>
+                <MenuItem>
+                  <NavLink
+                    to="/installation"
+                    style={activeStyle}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Installations Services
+                  </NavLink>
+                </MenuItem>
+                <MenuItem>
+                  <NavLink
+                    to="/support"
+                    style={activeStyle}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Maintenance & Support
+                  </NavLink>
+                </MenuItem>
+              </MenuItems>
+            </Transition>
+          </Menu>
           <NavLink
             to="/blog"
             className="p-4 font-primarySemibold"

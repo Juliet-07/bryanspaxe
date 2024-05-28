@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
-import Background from "../../assets/contactHero.png";
-import MobileBG from "../../assets/contactHeroMobile.png";
+import Background from "../../assets/blogHero.png";
+import MobileBG from "../../assets/blogHeroMobile.png";
 import { createClient } from "contentful";
 import { Link } from "react-router-dom";
 
@@ -33,7 +33,7 @@ const Blog = () => {
         style={{ backgroundImage: `url(${Background})` }}
       >
         <div className="w-full h-full flex flex-col justify-center relative z-[3]">
-          <div className="absolute flex flex-col p-6">
+          {/* <div className="absolute flex flex-col p-6">
             <p className="text-white text-xl font-primarySemibold py-4">
               Contact Us
             </p>
@@ -41,7 +41,7 @@ const Blog = () => {
               For any service help, technical aid, or project queries, reach out
               to us
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* Mobile Hero */}
@@ -50,7 +50,7 @@ const Blog = () => {
         style={{ backgroundImage: `url(${MobileBG})` }}
       >
         <div className="w-full h-full flex flex-col justify-center relative z-[3]">
-          <div className="absolute bottom-10 flex flex-col p-4">
+          {/* <div className="absolute bottom-10 flex flex-col p-4">
             <p className="text-white text-xl font-primaryBold py-4">
               Contact Us
             </p>
@@ -58,7 +58,7 @@ const Blog = () => {
               For any service help, technical aid, or project queries, reach out
               to us
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* BlogList Proper */}
