@@ -115,21 +115,12 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex p-4 gap-4">
-          <div className="grid gap-4">
-            <img
-              src={Mission1}
-              className="w-[193.4px] md:w-[322px] h-[213px] md:h-[272px]"
-            />
-            <img
-              src={Mission2}
-              className="w-[193.4px] md:w-[322px] h-[213px] md:h-[272px]"
-            />
+        <div className="flex items-stretch p-4 gap-4">
+          <div className="flex flex-col items-center justify-between">
+            <img src={Mission1} />
+            <img src={Mission2} />
           </div>
-          <img
-            src={Mission3}
-            className="w-[194px] md:w-[327px] h-[450px] md:h-[584px]"
-          />
+          <img src={Mission3} className="w-[194px]" />
         </div>
       </div>
       {/* Values */}

@@ -247,8 +247,8 @@ const Home = () => {
             solutions for each sector’s unique challenges."
           </p>
         </div>
-        <div className="flex gap-4">
-          <div className="grid gap-4">
+        <div className="flex items-stretch gap-4">
+          <div className="flex flex-col items-center justify-between">
             <img src={Industry1} />
             <img src={Industry2} />
           </div>

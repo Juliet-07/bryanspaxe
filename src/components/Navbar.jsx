@@ -57,7 +57,7 @@ const Navbar = () => {
                   style={activeStyle}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
-                 Engineering Consultation
+                  Engineering Consultation
                 </NavLink>
               </MenuItem>
               <MenuItem>
@@ -118,6 +118,7 @@ const Navbar = () => {
             to="/"
             className="p-4 font-primarySemibold"
             style={activeStyle}
+            onClick={() => setNav(false)}
           >
             Home
           </NavLink>
@@ -125,6 +126,7 @@ const Navbar = () => {
             to="/aboutUs"
             className="p-4 font-primarySemibold"
             style={activeStyle}
+            onClick={() => setNav(false)}
           >
             About us
           </NavLink>
@@ -147,20 +149,22 @@ const Navbar = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <MenuItems className="absolute left-0 z-10 mt-2 w-[300px]  origin-top-left rounded-md bg-white grid gap-4 shadow-lg">
+              <MenuItems className="absolute left-1/2 z-10 mt-2 w-[300px] transform -translate-x-1/2 origin-top-left rounded-md bg-white grid gap-4 shadow-lg">
                 <MenuItem>
                   <NavLink
                     to="/consultation"
                     style={activeStyle}
+                    onClick={() => setNav(false)}
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                   Engineering Consultation
+                    Engineering Consultation
                   </NavLink>
                 </MenuItem>
                 <MenuItem>
                   <NavLink
                     to="/procurement"
                     style={activeStyle}
+                    onClick={() => setNav(false)}
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Procurement Services
@@ -170,6 +174,7 @@ const Navbar = () => {
                   <NavLink
                     to="/installation"
                     style={activeStyle}
+                    onClick={() => setNav(false)}
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Installations Services
@@ -179,6 +184,7 @@ const Navbar = () => {
                   <NavLink
                     to="/support"
                     style={activeStyle}
+                    onClick={() => setNav(false)}
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Maintenance & Support
@@ -191,6 +197,7 @@ const Navbar = () => {
             to="/blog"
             className="p-4 font-primarySemibold"
             style={activeStyle}
+            onClick={() => setNav(false)}
           >
             Blog
           </NavLink>
@@ -198,6 +205,7 @@ const Navbar = () => {
             to="/contactUs"
             className="p-4 font-primarySemibold"
             style={activeStyle}
+            onClick={() => setNav(false)}
           >
             Contact Us
           </NavLink>
