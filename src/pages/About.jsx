@@ -44,9 +44,7 @@ const About = () => {
       >
         <div className="w-full h-full flex flex-col justify-center relative z-[3] bg-red-00">
           <div className="absolute bottom-10 flex flex-col p-4">
-            <p className="text-white text-xl font-primaryBold py-4">
-              About Us
-            </p>
+            <p className="text-white text-xl font-primaryBold py-4">About Us</p>
             <div className="w-[254px] font-primarySemibold text-xl text-white">
               Offering premium engineering parts and services. From startup to
               industry leader, driven by excellence, creativity and customer
@@ -67,10 +65,12 @@ const About = () => {
           <div className="font-primaryBold text-center text-xl md:text-4xl my-4">
             Who We Are
           </div>
-          <div className="md:w-[399px] leading-10 font-primaryRegular">
-            We are a premier provider of spare parts procurement and engineering
-            services, dedicated to supporting industries worldwide. Our focus on
-            quality, innovation, and customer satisfaction ensures that we
+          <div className="md:w-[410px] leading-10 font-primaryRegular">
+            We are a premier provider of process and industrial automation
+            services, we provide quality procurement services fot
+            instrumentation and other engineering spares across sectors. We are
+            dedicated to supporting industries globally and our focus on
+            quality, innovation and customer satisfaction ensures that we
             deliver exceptional products and services tailored to enhance the
             efficiency and productivity of our clients.
           </div>
@@ -107,10 +107,10 @@ const About = () => {
           >
             <p className="font-primaryBold text-xl text-white">Our Mission</p>
             <div className="p-3 font-primaryRegular text-sm text-white leading-8 text-center">
-              We strive to empower enterprises by providing dependable spare
-              components and state-of- the-art engineering remedies. Our goal is
-              to become the dependable ally that customers depend on to
-              accomplish their operational objectives with top-notch products
+              We strive to support our clients by providing dependable
+              automation solutions and state-of- the-art engineering remedies.
+              Our goal is to become the dependable ally that customers depend on
+              to accomplish their operational objectives with top-notch products
               and professional services.
             </div>
           </div>

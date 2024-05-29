@@ -39,22 +39,22 @@ const Home = () => {
         }}
       >
         <div className="w-full h-full flex flex-col items-center justify-center relative z-[3] bg-red-00">
-          <div className="md:w-[737px] absolute bg-green-00 flex flex-col items-center justify-center md:p-4">
+          <div className="md:w-[798px] absolute bg-green-00 flex flex-col items-center justify-center md:p-4">
             <div className="font-primaryBold text-[#1E1E1E] text-lg md:text-4xl text-center">
-              Streamlined Procurement and Expert Installation of Engineering
-              Parts & Services
+              Simplified Procurement and Professional Installation of Automated
+              Engineering Services
             </div>
             <div className="text-sm md:text-xl text-[#1E1E1E] font-primaryRegular my-4 text-center">
-              Your One-Stop Solution for Quality Components and Professional
-              Installation Services
+              Pioneering industry transformation with cutting edge automation
+              solution
             </div>
-            <div className="w-full flex items-center justify-center gap-4 mt-4">
-              <div className="w-[156px] md:w-[254px] h-10 md:h-[54px] rounded-lg flex items-center justify-center font-primarySemibold text-white bg-[#2F36A9]">
+            <div className="w-full flex items-center justify-center gap-4 p-4 m-4">
+              {/* <div className="w-[156px] md:w-[254px] h-10 md:h-[54px] rounded-lg flex items-center justify-center font-primarySemibold text-white bg-[#2F36A9]">
                 Free Estimate
-              </div>
+              </div> */}
               <div
                 onClick={scrollToExplore}
-                className="w-[156px] md:w-[254px] h-10 md:h-[54px] rounded-lg flex items-center justify-center font-primarySemibold text-[#2F36A9] border border-[#2F36A9] cursor-pointer"
+                className="w-full md:w-[254px] h-[54px] rounded-lg flex items-center justify-center font-primarySemibold text-[#2F36A9] border border-[#2F36A9] cursor-pointer"
               >
                 Explore Services
               </div>
@@ -249,10 +249,10 @@ const Home = () => {
         </div>
         <div className="flex gap-4">
           <div className="grid gap-4">
-            <img src={Industry1} className="w-[200px] h-[200px]" />
-            <img src={Industry2} className="w-[200px] h-[200px]" />
+            <img src={Industry1} />
+            <img src={Industry2} />
           </div>
-          <img src={Industry3} className="w-[194px] h-[450px]" />
+          <img src={Industry3} className="w-[194px]" />
         </div>
 
         <div className="w-[240px] text-lg">

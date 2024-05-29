@@ -97,7 +97,7 @@ const Contact = () => {
                 <MdLocalPhone size={20} color="#078904" />
               </span>
               <p className="md:text-lg text-[#078904] font-primarySemibold">
-                Call us 0912112200
+                Call us +2348172839005
               </p>
             </div>
           </div>
@@ -236,13 +236,16 @@ const Contact = () => {
           <p className="font-primarySemibold text-lg md:text-2xl">
             Head Office
           </p>
-          <div className="flex items-center py-4 font-primaryRegular">
+          <div className="flex items-center p-4 font-primaryRegular">
             <span className="mx-3">
               <FaLocationDot color="#078904" size={30} />
             </span>{" "}
-            <p>7 Marina street, Lagos Island, </p>
+            <p className="md:w-[397px] leading-10">
+              17 Adelebo street, behind Supersaver Supermarket, Gloryland
+              estate, Agor palace way, Okota, Lagos{" "}
+            </p>
           </div>
-          <p className="font-primaryRegular">Lagos, Nigeria</p>
+          {/* <p className="font-primaryRegular">Lagos, Nigeria</p> */}
         </div>
         <div className="text-center">
           <p className="font-primarySemibold text-lg md:text-2xl py-3">

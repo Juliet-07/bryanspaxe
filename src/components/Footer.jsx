@@ -1,20 +1,31 @@
 import React from "react";
-import Logo from "../assets/logo.png";
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../assets/footerLogo.png";
 import { AiOutlineCopyright } from "react-icons/ai";
 import { MdOutlineLocalPhone } from "react-icons/md";
-import { Link, NavLink } from "react-router-dom";
+import { BsLinkedin, BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className="w-full md:h-[487px] bg-gradient-to-r from-[#FFFFFF] to-[#2F36A9]/70 flex flex-col justify-between mt-10">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-around p-6 flex-grow">
+    <div className="w-full  bg-gradient-to-r from-[#FFFFFF] to-[#2F36A9]/70 flex flex-col justify-between mt-10">
+      <div className="flex flex-col md:flex-row md:items-stretch md:justify-evenly my-10 p-6 flex-grow">
         {/* 1 */}
         <div className="flex-col mb-4 md:mb-0">
-          <div className="w-[155px] h-[123px] my-2">
+          <div className="w-[300px] my-2">
             <img src={Logo} alt="Bryanspaxe" />
           </div>
-          <div className="hidden text-base text-white font-primarySemibold w-[311px]">
-            Investment opportunities in multiple markets, one account
+          <div className="hidden md:flex flex-col text-base text-black font-primaryRegular">
+            <div className="flex gap-4 text-gray-900 my-4">
+              <a
+                href="https://www.linkedin.com/company/bryanspaxe-integrated-services-limited/mycompany/"
+                target="_blank"
+              >
+                <BsLinkedin size={30} />
+              </a>
+              <BsFacebook size={30} />
+            </div>
+
+            <p>Terms of Use and Privacy Policy</p>
           </div>
         </div>
         {/* 2 */}
@@ -38,9 +49,17 @@ const Footer = () => {
             <span className="mr-2">
               <MdOutlineLocalPhone size={20} />
             </span>
-            Call us 091223344
+            Call us +2348172839005
           </div>
-          <div className="text-gray-900">social media icons</div>
+          <div className="flex gap-4 md:hidden text-gray-900">
+            <a
+              href="https://www.linkedin.com/company/bryanspaxe-integrated-services-limited/mycompany/"
+              target="_blank"
+            >
+              <BsLinkedin size={30} />
+            </a>
+            <BsFacebook size={30} />
+          </div>
         </div>
       </div>
       <hr className="border-t border-[#A9A5A5] w-full" />
