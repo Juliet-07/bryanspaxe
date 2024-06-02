@@ -607,7 +607,7 @@ const Home = () => {
           </span>
           Securely Registered
         </div>
-        <div className="font-primaryRegular mt-4 md:mt-10">RC: 210221251AC</div>
+        <div className="font-primarySemibold md:mt-4">Company Registration Number: 7490342</div>
       </div>
     </>
   );
