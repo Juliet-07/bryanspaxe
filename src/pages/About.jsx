@@ -1,6 +1,6 @@
 import React from "react";
-import Background from "../assets/aboutHero.png";
-import MobileBG from "../assets/aboutHeroMobile.png";
+import Background from "../assets/aboutHero.jpeg";
+import MobileBG from "../assets/aboutHeroMobile.jpeg";
 import WhoWeAre from "../assets/whoWeAre.png";
 import Mission1 from "../assets/mission1.png";
 import Mission2 from "../assets/mission2.png";
@@ -67,7 +67,7 @@ const About = () => {
           </div>
           <div className="md:w-[410px] leading-10 font-primaryRegular">
             We are a premier provider of process and industrial automation
-            services, we provide quality procurement services fot
+            services, we provide quality procurement services for
             instrumentation and other engineering spares across sectors. We are
             dedicated to supporting industries globally and our focus on
             quality, innovation and customer satisfaction ensures that we
