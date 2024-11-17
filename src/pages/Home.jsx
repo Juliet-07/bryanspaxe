@@ -23,6 +23,10 @@ import Navante from "../assets/navante.png";
 import Dangote from "../assets/dangote.png";
 import Bua from "../assets/bua.png";
 
+import MM from "../assets/mar&mor.png";
+import Prudent from "../assets/prudent.png";
+import FMN from "../assets/fmn-logo.png";
+
 const Home = () => {
   const exploreRef = useRef(null);
 
@@ -563,38 +567,57 @@ const Home = () => {
         </div>
       </div>
       {/* Clients */}
-      <div className="w-full flex flex-col items-center justify-center my-10">
+      <div className="w-full flex flex-col items-center justify-center my-10 overflow-hidden">
         <div className="font-primaryBold text-[#1E1E1E] text-xl md:text-3xl my-4">
           Our Clients
         </div>
-        <div className="flex items-center gap-4 md:gap-10 px-4">
-          <img
-            src={Axeela}
-            alt="Axeela LOGO"
-            className="w-[67.76px] md:w-[190.23px] h-10 md:h-[120.72px]"
-          />
-          <img
-            src={Total}
-            alt="Total LOGO"
-            className="w-[51pxpx] md:w-[143px] h-[22px] md:h-[61px]"
-          />
-          <img
-            src={Navante}
-            alt="Navante LOGO"
-            className="w-[87px] md:w-[244.4px] h-[26.1px] md:h-[73.2px]"
-          />
-          <img
-            src={Dangote}
-            alt="Dangote LOGO"
-            className="w-[63.85px] md:w-[179.3px] h-[33.13px] md:h-[93.02px]"
-          />
-          <img
-            src={Bua}
-            alt="Bua LOGO"
-            className="w-[47.02px] md:w-[132px] h-[35.62px] md:h-[100px]"
-          />
+        <div className="w-full overflow-hidden">
+          {/* Scrolling Container */}
+          <div className="flex items-center gap-8 animate-marquee">
+            <img
+              src={Axeela}
+              alt="Axeela LOGO"
+              className="w-20 md:w-32 h-auto animate-bounce-slow"
+            />
+            <img
+              src={Total}
+              alt="Total LOGO"
+              className="w-16 md:w-28 h-auto animate-bounce-slow"
+            />
+            <img
+              src={Navante}
+              alt="Navante LOGO"
+              className="w-24 md:w-40 h-auto animate-bounce-slow"
+            />
+            <img
+              src={Dangote}
+              alt="Dangote LOGO"
+              className="w-20 md:w-36 h-auto animate-bounce-slow"
+            />
+            <img
+              src={Bua}
+              alt="Bua LOGO"
+              className="w-16 md:w-28 h-auto animate-bounce-slow"
+            />
+            <img
+              src={MM}
+              alt="Mar&Mor LOGO"
+              className="w-16 md:w-28 h-auto animate-bounce-slow"
+            />
+            <img
+              src={Prudent}
+              alt="Prudent Energy LOGO"
+              className="w-16 md:w-28 h-auto animate-bounce-slow"
+            />
+            <img
+              src={FMN}
+              alt="FMN LOGO"
+              className="w-16 md:w-28 h-auto animate-bounce-slow"
+            />
+          </div>
         </div>
       </div>
+
       {/* Registered */}
       <div className="w-full flex flex-col items-center justify-center">
         <div className="flex items-center font-primaryBold text-[#1E1E1E] text-xl md:text-3xl my-4">
@@ -607,7 +630,9 @@ const Home = () => {
           </span>
           Securely Registered
         </div>
-        <div className="font-primarySemibold md:mt-4">Company Registration Number: 7490342</div>
+        <div className="font-primarySemibold md:mt-4">
+          Company Registration Number: 7490342
+        </div>
       </div>
     </>
   );
