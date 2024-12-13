@@ -22,7 +22,7 @@ import Total from "../assets/total.png";
 import Navante from "../assets/navante.png";
 import Dangote from "../assets/dangote.png";
 import Bua from "../assets/bua.png";
-
+import { motion } from "framer-motion";
 import MM from "../assets/mar&mor.png";
 import Prudent from "../assets/prudent.png";
 import FMN from "../assets/fmn-logo.png";
@@ -67,16 +67,22 @@ const Home = () => {
         </div>
       </div>
       {/* Service Men Section */}
-      <div className="w-full flex items-center justify-center gap-4 md:gap-10">
-        <img
+      <div className="w-full flex items-center justify-around md:justify-center md:gap-10">
+        <motion.img
           src={Image1}
           alt="Service Men"
-          className="w-[186px] md:w-[500px] h-[232px] md:h-[500px] 2xl:w-[600px] 2xl:h-[630px] "
+          className="w-[186px] md:w-[500px] h-[232px] md:h-[500px] 2xl:w-[600px] 2xl:h-[630px]"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         />
-        <img
+        <motion.img
           src={Image2}
           alt="Service Men"
-          className="w-[186px] md:w-[500px] h-[232px] md:h-[500px] 2xl:w-[600px] 2xl:h-[630px] "
+          className="w-[186px] md:w-[500px] h-[232px] md:h-[500px] 2xl:w-[600px] 2xl:h-[630px]"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         />
       </div>
       {/* Why Choose Us */}
@@ -246,7 +252,7 @@ const Home = () => {
           <p className="text-xl font-primaryBold text-[#1E1E1E]">
             Industries Served
           </p>
-          <p className="font-primaryRegular text-[#1E1E1E] py-4">
+          <p className="text-sm font-primaryRegular text-[#1E1E1E] py-2">
             We cater to a diverse range of industries, ensuring specialized
             solutions for each sector’s unique challenges."
           </p>
@@ -392,10 +398,10 @@ const Home = () => {
       {/* Explore Mobile */}
       <div
         ref={exploreRef}
-        className="w-full md:hidden flex flex-col items-center justify-center my-10 p-4"
+        className="w-full md:hidden flex flex-col items-center justify-center my-10"
       >
         <div className="font-primaryBold text-xl">Explore Our Services</div>
-        <div className="w-full grid gap-10 mt-6">
+        <div className="w-full grid items-center justify-center gap-10 px-4 py-2mt-4">
           <div>
             <img src={Consultation} className="w-[384px] h-[319px]" />
           </div>
@@ -480,7 +486,7 @@ const Home = () => {
               <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
                 04
               </div>
-              <div className="w-[342px] text-lg font-primaryRegular text-[#000000] leading-10">
+              <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
                 Ensure the smooth operation of your systems with our extensive
                 maintenance and support solutions. We provide both regular
                 maintenance and urgent repair services to reduce downtime and
@@ -573,7 +579,7 @@ const Home = () => {
         </div>
         <div className="w-full overflow-hidden">
           {/* Scrolling Container */}
-          <div className="flex items-center gap-8 animate-marquee">
+          <div className="flex items-center gap-6 animate-marquee">
             <img
               src={Axeela}
               alt="Axeela LOGO"
