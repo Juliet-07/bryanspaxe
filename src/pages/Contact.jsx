@@ -238,11 +238,10 @@ const Contact = () => {
           </p>
           <div className="flex items-center p-4 font-primaryRegular">
             <span className="mx-3">
-              <FaLocationDot color="#078904" size={30} />
-            </span>{" "}
-            <p className="md:w-[397px] leading-10">
-              17 Adelebo street, behind Supersaver Supermarket, Gloryland
-              estate, Agor palace way, Okota, Lagos{" "}
+              <FaLocationDot color="#078904" size={20} />
+            </span>
+            <p className="leading-10">
+              Amuwo-Odofin, Lagos State, Nigeria
             </p>
           </div>
           {/* <p className="font-primaryRegular">Lagos, Nigeria</p> */}
