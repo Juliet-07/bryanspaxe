@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { AiOutlineClose, AiOutlineAlignRight } from "react-icons/ai";
 import {
@@ -25,7 +25,9 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-20 fixed top-0 left-0 flex items-center justify-between mx-auto p-4 px-6 md:px-10 2xl:px-20 z-10 text-black border-b-[#A9A5A5] bg-white">
-      <img src={Logo} alt="Bryanspaxe" className="w-[60px] md:w-[98px]" />
+      <Link to="/">
+        <img src={Logo} alt="Bryanspaxe" className="w-[60px] md:w-[98px]" />
+      </Link>
 
       <nav className="text-[#1E1E1E] font-primaryRegular hidden md:flex">
         <NavLink to="/" className="p-2" style={activeStyle}>

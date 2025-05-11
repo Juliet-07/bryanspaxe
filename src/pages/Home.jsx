@@ -296,7 +296,7 @@ const Home = () => {
         className="w-full hidden md:flex flex-col items-center justify-center my-10 p-4"
       >
         <div className="font-primaryBold text-3xl">Explore Our Services</div>
-        <div className="w-full grid grid-cols-2 gap-10 2xl:gap-20 p-6 2xl:p-10 mt-6">
+        <div className="w-full grid grid-cols-2 gap-10 2xl:gap-20 p-10">
           <div className="flex flex-col">
             <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
               <p>Engineering Consultation</p>
@@ -398,10 +398,10 @@ const Home = () => {
       {/* Explore Mobile */}
       <div
         ref={exploreRef}
-        className="w-full md:hidden flex flex-col items-center justify-center my-10"
+        className="w-full md:hidden flex flex-col items-center justify-center my-5"
       >
         <div className="font-primaryBold text-xl">Explore Our Services</div>
-        <div className="w-full grid items-center justify-center gap-10 px-4 py-2mt-4">
+        <div className="w-full grid items-center justify-center gap-10 p-4">
           <div>
             <img src={Consultation} className="w-[384px] h-[319px]" />
           </div>
@@ -501,7 +501,7 @@ const Home = () => {
         </div>
       </div>
       {/* Partners */}
-      <div className="w-full flex flex-col items-center justify-center md:my-12 2xl:my-20">
+      <div className="w-full flex flex-col items-center justify-center">
         <div className="font-primaryBold text-[#1E1E1E] text-xl md:text-3xl my-4">
           Our Partners
         </div>
