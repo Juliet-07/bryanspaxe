@@ -31,8 +31,11 @@ const Home = () => {
   const exploreRef = useRef(null);
 
   const scrollToExplore = () => {
-    exploreRef.current.scrollIntoView({ behavior: "smooth" });
+    if (exploreRef.current) {
+      exploreRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
   return (
     <>
       {/* Hero Section */}
@@ -291,215 +294,213 @@ const Home = () => {
         </div>
       </div>
       {/* Explore */}
-      <div
-        ref={exploreRef}
-        className="w-full hidden md:flex flex-col items-center justify-center my-10 p-4"
-      >
-        <div className="font-primaryBold text-3xl">Explore Our Services</div>
-        <div className="w-full grid grid-cols-2 gap-10 2xl:gap-20 p-10">
-          <div className="flex flex-col">
-            <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
-              <p>Engineering Consultation</p>
-              <hr className="w-[243px] border border-[#2F36A9] mx-2" />
-            </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
-                01
+      <div ref={exploreRef}>
+        {/* Desktop View */}
+        <div className="w-full md:flex flex-col items-center justify-center my-10 p-4 hidden">
+          <div className="font-primaryBold text-3xl">Explore Our Services</div>
+          <div className="w-full grid grid-cols-2 gap-10 2xl:gap-20 p-10">
+            <div className="flex flex-col">
+              <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
+                <p>Engineering Consultation</p>
+                <hr className="w-[243px] border border-[#2F36A9] mx-2" />
               </div>
-              <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
-                Our engineering consultation services are crafted to assist you
-                from the initial idea to the ultimate execution. Our group of
-                skilled engineers offers professional guidance and customized
-                solutions to meet your particular requirements.
-                <br />
-                <Link to="/consultation">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
+                  01
+                </div>
+                <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
+                  Our engineering consultation services are crafted to assist
+                  you from the initial idea to the ultimate execution. Our group
+                  of skilled engineers offers professional guidance and
+                  customized solutions to meet your particular requirements.
+                  <br />
+                  <Link to="/consultation">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src={Consultation} />
+            </div>
+            <div>
+              <img src={Procurement} />
+            </div>
+            <div className="flex flex-col">
+              <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
+                <p>Procurement Services</p>
+                <hr className="w-[243px] border border-[#2F36A9] mx-2" />
+              </div>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
+                  02
+                </div>
+                <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
+                  We optimize your purchasing procedure to guarantee the
+                  acquisition of top-notch components at competitive rates. Our
+                  purchasing team utilizes an extensive network of reliable
+                  suppliers to fulfill your particular needs.
+                  <br />
+                  <Link to="/procurement">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
+                <p>Installation Services</p>
+                <hr className="w-[243px] border border-[#2F36A9] mx-2" />
+              </div>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
+                  03
+                </div>
+                <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
+                  Our installation services encompass all aspects, starting from
+                  site readiness to the ultimate activation of your systems. We
+                  guarantee the accurate installation of your equipment and its
+                  optimal functionality right from the outset.
+                  <br />
+                  <Link to="/installation">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src={Installation} />
+            </div>
+            <div>
+              <img src={Support} />
+            </div>
+            <div className="flex flex-col">
+              <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
+                <p>Maintenance and Support</p>
+                <hr className="w-[243px] border border-[#2F36A9] mx-2" />
+              </div>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
+                  04
+                </div>
+                <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
+                  Ensure the smooth operation of your systems with our extensive
+                  maintenance and support solutions. We provide both regular
+                  maintenance and urgent repair services to reduce downtime and
+                  prolong the lifespan of your machinery.
+                  <br />
+                  <Link to="/support">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <img src={Consultation} />
-          </div>
-          <div>
-            <img src={Procurement} />
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
-              <p>Procurement Services</p>
-              <hr className="w-[243px] border border-[#2F36A9] mx-2" />
+        </div>
+        {/* Mobile View */}
+        <div className="w-full md:hidden flex flex-col items-center justify-center my-5">
+          <div className="font-primaryBold text-xl">Explore Our Services</div>
+          <div className="w-full grid items-center justify-center gap-10 p-4">
+            <div>
+              <img src={Consultation} className="w-[384px] h-[319px]" />
             </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
-                02
+            <div className="flex flex-col">
+              <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-lg text-[#2F36A9]">
+                <p>Engineering Consultation</p>
+                <hr className="w-[129px] border border-[#2F36A9] mx-2" />
               </div>
-              <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
-                We optimize your purchasing procedure to guarantee the
-                acquisition of top-notch components at competitive rates. Our
-                purchasing team utilizes an extensive network of reliable
-                suppliers to fulfill your particular needs.
-                <br />
-                <Link to="/procurement">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
-              <p>Installation Services</p>
-              <hr className="w-[243px] border border-[#2F36A9] mx-2" />
-            </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
-                03
-              </div>
-              <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
-                Our installation services encompass all aspects, starting from
-                site readiness to the ultimate activation of your systems. We
-                guarantee the accurate installation of your equipment and its
-                optimal functionality right from the outset.
-                <br />
-                <Link to="/installation">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
+                  01
+                </div>
+                <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
+                  Our engineering consultation services are crafted to assist
+                  you from the initial idea to the ultimate execution. Our group
+                  of skilled engineers offers professional guidance and
+                  customized solutions to meet your particular requirements.
+                  <br />
+                  <Link to="/consultation">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <img src={Installation} />
-          </div>
-          <div>
-            <img src={Support} />
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[521px] h-[27px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
-              <p>Maintenance and Support</p>
-              <hr className="w-[243px] border border-[#2F36A9] mx-2" />
+            <div>
+              <img src={Procurement} className="w-[384px] h-[319px]" />
             </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-5xl text-[#01A003]">
-                04
+            <div className="flex flex-col">
+              <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-lg text-[#2F36A9]">
+                <p>Procurement Services</p>
+                <hr className="w-[129px] border border-[#2F36A9] mx-2" />
               </div>
-              <div className="w-[454px] text-lg font-primaryRegular text-[#000000] leading-10">
-                Ensure the smooth operation of your systems with our extensive
-                maintenance and support solutions. We provide both regular
-                maintenance and urgent repair services to reduce downtime and
-                prolong the lifespan of your machinery.
-                <br />
-                <Link to="/support">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
+                  02
+                </div>
+                <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
+                  We optimize your purchasing procedure to guarantee the
+                  acquisition of top-notch components at competitive rates. Our
+                  purchasing team utilizes an extensive network of reliable
+                  suppliers to fulfill your particular needs.
+                  <br />
+                  <Link to="/procurement">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src={Installation} className="w-[384px] h-[319px]" />
+            </div>
+            <div className="flex flex-col">
+              <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
+                <p>Installation Services</p>
+                <hr className="w-[129px] border border-[#2F36A9] mx-2" />
+              </div>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
+                  03
+                </div>
+                <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
+                  Our installation services encompass all aspects, starting from
+                  site readiness to the ultimate activation of your systems. We
+                  guarantee the accurate installation of your equipment and its
+                  optimal functionality right from the outset.
+                  <br />
+                  <Link to="/installation">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src={Support} className="w-[384px] h-[319px]" />
+            </div>
+            <div className="flex flex-col">
+              <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-lg text-[#2F36A9]">
+                <p>Maintenance and Support</p>
+                <hr className="w-[129px] border border-[#2F36A9] mx-2" />
+              </div>
+              <div className="flex py-4">
+                <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
+                  04
+                </div>
+                <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
+                  Ensure the smooth operation of your systems with our extensive
+                  maintenance and support solutions. We provide both regular
+                  maintenance and urgent repair services to reduce downtime and
+                  prolong the lifespan of your machinery.
+                  <br />
+                  <Link to="/support">
+                    <span className="underline text-[#2F36A9]">Learn more</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Explore Mobile */}
-      <div
-        ref={exploreRef}
-        className="w-full md:hidden flex flex-col items-center justify-center my-5"
-      >
-        <div className="font-primaryBold text-xl">Explore Our Services</div>
-        <div className="w-full grid items-center justify-center gap-10 p-4">
-          <div>
-            <img src={Consultation} className="w-[384px] h-[319px]" />
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-lg text-[#2F36A9]">
-              <p>Engineering Consultation</p>
-              <hr className="w-[129px] border border-[#2F36A9] mx-2" />
-            </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
-                01
-              </div>
-              <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
-                Our engineering consultation services are crafted to assist you
-                from the initial idea to the ultimate execution. Our group of
-                skilled engineers offers professional guidance and customized
-                solutions to meet your particular requirements.
-                <br />
-                <Link to="/consultation">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src={Procurement} className="w-[384px] h-[319px]" />
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-lg text-[#2F36A9]">
-              <p>Procurement Services</p>
-              <hr className="w-[129px] border border-[#2F36A9] mx-2" />
-            </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
-                02
-              </div>
-              <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
-                We optimize your purchasing procedure to guarantee the
-                acquisition of top-notch components at competitive rates. Our
-                purchasing team utilizes an extensive network of reliable
-                suppliers to fulfill your particular needs.
-                <br />
-                <Link to="/procurement">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src={Installation} className="w-[384px] h-[319px]" />
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-xl text-[#2F36A9]">
-              <p>Installation Services</p>
-              <hr className="w-[129px] border border-[#2F36A9] mx-2" />
-            </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
-                03
-              </div>
-              <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
-                Our installation services encompass all aspects, starting from
-                site readiness to the ultimate activation of your systems. We
-                guarantee the accurate installation of your equipment and its
-                optimal functionality right from the outset.
-                <br />
-                <Link to="/installation">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src={Support} className="w-[384px] h-[319px]" />
-          </div>
-          <div className="flex flex-col">
-            <div className="w-[382px] h-[25px] my-2 flex items-baseline font-primaryBold text-lg text-[#2F36A9]">
-              <p>Maintenance and Support</p>
-              <hr className="w-[129px] border border-[#2F36A9] mx-2" />
-            </div>
-            <div className="flex py-4">
-              <div className="mr-4 font-primaryBold text-2xl text-[#01A003]">
-                04
-              </div>
-              <div className="w-[342px] text-sm font-primaryRegular text-[#000000] leading-10">
-                Ensure the smooth operation of your systems with our extensive
-                maintenance and support solutions. We provide both regular
-                maintenance and urgent repair services to reduce downtime and
-                prolong the lifespan of your machinery.
-                <br />
-                <Link to="/support">
-                  <span className="underline text-[#2F36A9]">Learn more</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* Partners */}
       <div className="w-full flex flex-col items-center justify-center">
         <div className="font-primaryBold text-[#1E1E1E] text-xl md:text-3xl my-4">
